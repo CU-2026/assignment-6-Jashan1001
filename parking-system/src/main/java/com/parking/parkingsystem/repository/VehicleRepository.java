@@ -4,5 +4,5 @@ import com.parking.parkingsystem.entity.Vehicle;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface VehicleRepository extends JpaRepository<Vehicle, Long> {
-
+	java.util.Optional<Vehicle> findByRegNo(String regNo);
 }

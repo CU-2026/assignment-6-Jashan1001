@@ -2,6 +2,7 @@ package com.parking.parkingsystem.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Pattern;
 import lombok.Data;
 
 import java.util.List;
@@ -21,7 +22,12 @@ public class User {
     @Email(message="Enter a valid email")
     private String email;
 
+
     private String phoneNo;
+
+    @Pattern(regexp = "\\d{12}", message = "Aadhar number must be a 12-digit number")
+    @Column(unique = true, nullable = false)
+    private String aadharNumber;
 
     private String idProof;
 

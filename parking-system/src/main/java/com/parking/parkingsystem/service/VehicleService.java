@@ -6,4 +6,8 @@ public interface VehicleService {
 
     Vehicle registerVehicle(Vehicle vehicle);
 
+    Vehicle addVehicleToUser(Long userId, Vehicle vehicle);
+
+    Vehicle getVehicleByRegistrationNo(String registrationNo);
+
 }
